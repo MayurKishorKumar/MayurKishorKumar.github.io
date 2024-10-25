@@ -1,0 +1,50 @@
+/* Styles for screens up to 600px */
+@media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    body {
+      font-size: 12px;
+    }
+  
+    .hero {
+      min-height: 70vh;
+      padding: 1rem;
+    }
+  
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .glitch {
+      font-size: 1.2rem;
+    }
+  
+    .social-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* Further adjustments for screens up to 480px */
+  @media (max-width: 480px) {
+    .about p {
+      font-size: 0.7rem;
+      line-height: 1.5;
+    }
+  
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .carousel-btn {
+      font-size: 1rem;
+      padding: 0.25rem;
+    }
+  
+    .section-title {
+      font-size: 1rem;
+    }
+  }  
