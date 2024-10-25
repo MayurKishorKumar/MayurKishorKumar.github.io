@@ -26,13 +26,6 @@
       flex-direction: column;
       gap: 0.5rem;
     }
-
-    .typewriter {
-      font-size: 0.4rem; /* Adjust font size as needed */
-      width: 80%; /* Ensure it stays within the screen */
-      margin: 0 auto; /* Center align */
-      text-align: center;
-    }
   }
   
   /* Further adjustments for screens up to 480px */
@@ -53,10 +46,5 @@
   
     .section-title {
       font-size: 1rem;
-    }
-
-    .typewriter {
-      font-size: 0.3rem; /* Further reduce font size if needed */
-      width: 70%;
     }
   }  
