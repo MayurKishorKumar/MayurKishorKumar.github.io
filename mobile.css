@@ -29,7 +29,7 @@
 
     .typewriter {
       font-size: 0.7rem; /* Adjust font size as needed */
-      width: 90%; /* Ensure it stays within the screen */
+      width: 100%; /* Ensure it stays within the screen */
       margin: 0 auto; /* Center align */
       text-align: center;
     }
@@ -57,6 +57,6 @@
 
     .typewriter {
       font-size: 0.6rem; /* Further reduce font size if needed */
-      width: 80%;
+      width: 100%;
     }
   }  
