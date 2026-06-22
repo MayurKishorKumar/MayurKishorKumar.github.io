@@ -15,6 +15,19 @@ themeToggle.addEventListener('click', () => {
   setTheme(!isDark);
 });
 
+
+// PSP-style status clock
+const pspClock = document.getElementById('pspClock');
+
+function updatePspClock() {
+  if (!pspClock) return;
+  const now = new Date();
+  pspClock.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+
+updatePspClock();
+setInterval(updatePspClock, 30000);
+
 // Carousel functionality
 const carousel = document.querySelector('.carousel-container');
 const slides = document.querySelectorAll('.carousel-slide');
