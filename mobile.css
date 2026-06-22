@@ -1,100 +1,62 @@
 /* Styles for screens up to 600px */
 @media (max-width: 600px) {
-  body {
-    font-size: 12px;
-  }
+    .container {
+      padding: 1rem;
+    }
+  
+    body {
+      font-size: 12px;
+    }
+  
+    .hero {
+      min-height: 70vh;
+      padding: 1rem;
+    }
+  
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .glitch {
+      font-size: 1.2rem;
+    }
+  
+    .social-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 
-  .psp-status-bar {
-    padding: 0.7rem 0.8rem;
-    font-size: 0.48rem;
+    .typewriter {
+      font-size: 0.7rem; /* Adjust font size as needed */
+      width: 100%; /* Ensure it stays within the screen */
+      margin: 0 auto; /* Center align */
+      text-align: center;
+    }
   }
+  
+  /* Further adjustments for screens up to 480px */
+  @media (max-width: 480px) {
+    .about p {
+      font-size: 0.7rem;
+      line-height: 1.5;
+    }
+  
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .carousel-btn {
+      font-size: 1rem;
+      padding: 0.25rem;
+    }
+  
+    .section-title {
+      font-size: 1rem;
+    }
 
-  .theme-toggle {
-    top: 3.2rem;
-    right: 0.75rem;
-  }
-
-  #themeToggle {
-    width: 2.55rem;
-    height: 2.55rem;
-    font-size: 0.95rem;
-  }
-
-  .container {
-    padding: 4.75rem 1rem 2rem;
-  }
-
-  .hero {
-    min-height: 82vh;
-    padding: 1rem 0 3rem;
-  }
-
-  .hero-content {
-    padding: 1.25rem;
-    border-radius: 22px;
-  }
-
-  .avatar {
-    width: 108px;
-    height: 108px;
-    border-radius: 20px;
-  }
-
-  .glitch {
-    font-size: 1.2rem;
-  }
-
-  .social-links {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-
-  .social-link {
-    padding-top: 3.75rem;
-    font-size: 0.55rem;
-  }
-
-  .typewriter {
-    max-width: 100%;
-    font-size: 0.62rem;
-    white-space: normal;
-    border-right: 0;
-    animation: none;
-  }
-}
-
-/* Further adjustments for screens up to 480px */
-@media (max-width: 480px) {
-  .about,
-  .skill-category,
-  .timeline-item,
-  .carousel-slide {
-    border-radius: 18px;
-  }
-
-  .about p,
-  .carousel-slide p,
-  .timeline-item p,
-  .timeline-item li {
-    font-size: 0.64rem;
-    line-height: 1.7;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .carousel-slide {
-    padding: 1.5rem 2.7rem;
-  }
-
-  .carousel-btn {
-    width: 2.1rem;
-    height: 2.1rem;
-    font-size: 0.72rem;
-  }
-
-  .section-title {
-    font-size: 0.95rem;
-  }
-}
+    .typewriter {
+      font-size: 0.6rem; /* Further reduce font size if needed */
+      width: 100%;
+    }
+  }  
