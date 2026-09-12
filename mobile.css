@@ -1,62 +1,91 @@
-/* Styles for screens up to 600px */
 @media (max-width: 600px) {
-    .container {
-      padding: 1rem;
-    }
-  
-    body {
-      font-size: 12px;
-    }
-  
-    .hero {
-      min-height: 70vh;
-      padding: 1rem;
-    }
-  
-    .avatar {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .glitch {
-      font-size: 1.2rem;
-    }
-  
-    .social-links {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+  .container { padding: 1rem; }
 
-    .typewriter {
-      font-size: 0.7rem; /* Adjust font size as needed */
-      width: 100%; /* Ensure it stays within the screen */
-      margin: 0 auto; /* Center align */
-      text-align: center;
-    }
+  body { font-size: 14px; }
+
+  .hero {
+    min-height: 80vh;
+    padding: 1rem;
   }
-  
-  /* Further adjustments for screens up to 480px */
-  @media (max-width: 480px) {
-    .about p {
-      font-size: 0.7rem;
-      line-height: 1.5;
-    }
-  
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .carousel-btn {
-      font-size: 1rem;
-      padding: 0.25rem;
-    }
-  
-    .section-title {
-      font-size: 1rem;
-    }
 
-    .typewriter {
-      font-size: 0.6rem; /* Further reduce font size if needed */
-      width: 100%;
-    }
-  }  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .glitch {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .typewriter {
+    font-size: 0.62rem;
+    max-width: 100%;
+  }
+
+  .hero-focus {
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+
+  .social-links {
+    flex-direction: row;
+    gap: 0.6rem;
+  }
+
+  .social-link {
+    font-size: 0.55rem;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .about, .skills, .experience, .projects {
+    padding-top: 3rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .skills-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+  .skill-category { padding: 1.25rem; }
+
+  .skill-item { font-size: 0.5rem; }
+
+  .timeline { padding: 1rem 0; }
+
+  .timeline-item {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-item h3 { font-size: 0.72rem; line-height: 1.6; }
+  .timeline-item p { font-size: 0.8rem; }
+  .timeline-item li { font-size: 0.82rem; line-height: 1.65; }
+
+  .carousel-slide { padding: 2rem 1.25rem; }
+  .carousel-slide h3 { font-size: 0.72rem; line-height: 1.6; }
+  .carousel-slide p { font-size: 0.85rem; line-height: 1.75; }
+
+  .carousel-btn { padding: 0.35rem; font-size: 0.75rem; }
+  .prev { left: 0.35rem; }
+  .next { right: 0.35rem; }
+}
+
+@media (max-width: 480px) {
+  .hero { min-height: 75vh; }
+  .glitch { font-size: 0.9rem; }
+  .typewriter { font-size: 0.52rem; }
+  .hero-focus { font-size: 0.68rem; }
+
+  .social-links { gap: 0.45rem; }
+  .social-link { font-size: 0.48rem; padding: 0.45rem 0.5rem; }
+
+  .section-title { font-size: 0.95rem; }
+  .about p { font-size: 0.82rem; }
+  .timeline-item li { font-size: 0.78rem; }
+  .carousel-slide p { font-size: 0.78rem; }
+}
