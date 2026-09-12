@@ -1,207 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mayur Kishor Kumar — Machine Learning Engineer focused on Applied AI/ML, Generative AI, RAG, AI agents, MCP, and AI developer tooling." />
-    <title>Mayur Kishor Kumar | Machine Learning Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)" />
-  </head>
-  <body>
-    <div class="theme-toggle">
-      <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mayur Kishor Kumar — Machine Learning Engineer building production AI/ML systems, GenAI, RAG, agents, MCP and AI developer tooling.">
+  <title>Mayur Kishor Kumar | World 1-1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
+</head>
+<body>
+  <div class="game-shell">
+    <header class="hud">
+      <a class="hud-brand" href="#top" aria-label="Back to start">MAYUR<span class="hud-dot">●</span></a>
+      <div class="hud-stats">
+        <span>WORLD <b id="worldNumber">1-1</b></span>
+        <span>COINS <b id="coinCount">00</b></span>
+        <span>LVL <b id="levelPercent">01</b></span>
+      </div>
+      <button id="soundToggle" class="hud-button" aria-label="Toggle sound">♪ ON</button>
+    </header>
 
-    <main class="container">
-      <section class="hero">
-        <div class="hero-content">
-          <img src="./assets/pixel pfp.png" alt="Pixel-art avatar of Mayur Kishor Kumar" class="avatar" />
-          <h1 class="glitch" data-text="Mayur Kishor Kumar">Mayur Kishor Kumar</h1>
-          <p class="typewriter">Machine Learning Engineer</p>
-          <p class="hero-focus">Applied AI/ML · Generative AI · RAG · AI Agents · MCP</p>
-          <div class="social-links">
-            <a href="https://github.com/MayurKishorKumar" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/mayurkishorkumar/" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="./assets/Mayur-Kishor Kumar Resume.pdf" class="social-link">Resume</a>
+    <main id="top">
+      <section class="world hero-world" data-world="1-1">
+        <div class="cloud cloud-a"></div><div class="cloud cloud-b"></div><div class="cloud cloud-c"></div>
+        <div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="hero-copy">
+          <div class="level-label">WORLD 1-1</div>
+          <div class="hero-avatar-wrap">
+            <img src="./assets/pixel pfp.png" alt="Pixel-art avatar of Mayur Kishor Kumar" class="hero-avatar">
+            <span class="avatar-shadow"></span>
+          </div>
+          <h1>Mayur<br>Kishor Kumar</h1>
+          <p class="hero-role">MACHINE LEARNING ENGINEER</p>
+          <p class="hero-sub">APPLIED AI/ML · GENAI · RAG · AGENTS · MCP</p>
+          <button class="start-button level-link" data-target="about">▶ START ADVENTURE</button>
+          <div class="hero-links">
+            <a href="https://github.com/MayurKishorKumar" target="_blank" rel="noopener noreferrer">GITHUB</a>
+            <a href="https://www.linkedin.com/in/mayurkishorkumar/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+            <a href="./assets/Mayur-Kishor Kumar Resume.pdf">RESUME</a>
+          </div>
+        </div>
+        <div class="ground"></div>
+        <div class="player-hint">USE ↑ ↓ OR SCROLL TO EXPLORE</div>
+      </section>
+
+      <nav class="world-map" aria-label="Portfolio worlds">
+        <div class="map-path"></div>
+        <button class="map-node active" data-target="about"><span class="node-icon">?</span><small>1-1</small><b>ABOUT</b></button>
+        <button class="map-node" data-target="skills"><span class="node-icon">★</span><small>1-2</small><b>SKILLS</b></button>
+        <button class="map-node" data-target="experience"><span class="node-icon">◆</span><small>1-3</small><b>EXPERIENCE</b></button>
+        <button class="map-node" data-target="projects"><span class="node-icon">▣</span><small>1-4</small><b>PROJECTS</b></button>
+      </nav>
+
+      <section id="about" class="level level-sky" data-world="1-1">
+        <div class="section-inner two-col">
+          <div class="section-heading"><span class="level-label">WORLD 1-1</span><h2>ABOUT<br>THE PLAYER</h2><p class="quest">QUEST: FIND OUT WHAT I BUILD</p></div>
+          <div class="speech-box">
+            <p>I’m a Machine Learning Engineer focused on building production AI/ML systems for real-world engineering workflows.</p>
+            <p>My work spans predictive machine learning, Generative AI, RAG, agentic systems, MCP integrations, and AI developer tooling.</p>
+            <p>At Rambus, I work on semiconductor engineering workflows and enterprise AI infrastructure in an air-gapped Linux environment.</p>
+            <p>I enjoy taking ambiguous engineering problems and turning them into systems that people can actually use.</p>
+          </div>
+        </div>
+        <div class="platform-row"><button class="question-block coin-trigger" aria-label="Collect coin">?</button><button class="question-block coin-trigger" aria-label="Collect coin">?</button><div class="brick-stack"><i></i><i></i><i></i><i></i></div><div class="pipe"><span></span></div></div>
+      </section>
+
+      <section id="skills" class="level skills-level" data-world="1-2">
+        <div class="section-inner">
+          <div class="level-heading-center"><span class="level-label">WORLD 1-2</span><h2>POWER-UPS</h2><p class="quest">COLLECT THE STACK</p></div>
+          <div class="power-grid">
+            <article class="power-card"><span class="power-icon">PY</span><h3>MACHINE LEARNING</h3><div class="chips"><span>Python</span><span>SQL</span><span>PyTorch</span><span>Scikit-Learn</span><span>XGBoost</span><span>Deep Learning</span><span>Time Series</span></div></article>
+            <article class="power-card"><span class="power-icon">AI</span><h3>GENERATIVE AI</h3><div class="chips"><span>LLMs</span><span>RAG</span><span>AI Agents</span><span>MCP</span><span>Fine-Tuning</span><span>LoRA / QLoRA</span><span>Prompt Engineering</span></div></article>
+            <article class="power-card"><span class="power-icon">⚙</span><h3>AI INFRASTRUCTURE</h3><div class="chips"><span>Linux</span><span>Docker</span><span>FastAPI</span><span>MLflow</span><span>FAISS</span><span>ChromaDB</span><span>Ollama</span><span>Groq</span></div></article>
+            <article class="power-card"><span class="power-icon">⌘</span><h3>AI DEVELOPER TOOLING</h3><div class="chips"><span>GitHub Copilot</span><span>Continue.dev</span><span>OpenClaw</span><span>n8n</span><span>LangGraph</span><span>Jira</span><span>ServiceNow</span></div></article>
+          </div>
+        </div>
+        <div class="platform-row underground"><div class="coin coin-static">$</div><div class="brick-stack wide"><i></i><i></i><i></i><i></i><i></i></div></div>
+      </section>
+
+      <section id="experience" class="level experience-level" data-world="1-3">
+        <div class="section-inner">
+          <div class="level-heading-center"><span class="level-label">WORLD 1-3</span><h2>LEVELS CLEARED</h2><p class="quest">PRESS A CHECKPOINT TO READ THE RUN</p></div>
+          <div class="timeline-game">
+            <article class="checkpoint main-checkpoint"><div class="checkpoint-badge">01</div><div><span class="date">JUL 2025 — PRESENT · BENGALURU</span><h3>Machine Learning Engineer Intern · Rambus</h3><p>Production ML and AI systems across semiconductor engineering workflows in an air-gapped RHEL/Linux environment.</p><ul><li>Scaled EDA resource prediction from <strong>30K → 1.5M+ jobs</strong> across 4+ years; R² ≈ <strong>0.87</strong> for 90th-percentile prediction.</li><li>Built ~15 MCP integrations personally and ~20 across the team for Jira, Confluence, Jenkins and ServiceNow, supporting hundreds of users.</li><li>Built AI developer tooling around Copilot, Continue.dev, terminal agents and OpenClaw, including ~70 engineering skills.</li><li>Designed enterprise RAG, knowledge-graph retrieval, log analysis, OCR and API automation with feedback indicating ~40% average time savings.</li></ul></div></article>
+            <article class="checkpoint"><div class="checkpoint-badge">02</div><div><span class="date">SEP 2024 — JUN 2025 · BOSTON</span><h3>Applied AI Engineer · Humanitarians AI</h3><p>Created <strong>10+ AI applications</strong> from scratch using custom RAG and multi-agent systems.</p><ul><li>Patient history, clinical triage and routing across <strong>10K+ documents</strong>.</li><li>Planning, memory, tools, multi-hop reasoning, debate, routing and evaluation.</li><li>Benchmarked transformer, embedding and vector database implementations with FAISS and ChromaDB.</li></ul></div></article>
+            <article class="checkpoint"><div class="checkpoint-badge">03</div><div><span class="date">MAR 2025 — MAY 2025 · SAN FRANCISCO</span><h3>Software Engineer — Platform Reliability & Tooling · AfterQuery Experts</h3><p>Improved Python ML/data pipeline reliability across NumPy, Pandas and PyTorch.</p><ul><li>Reduced runtime failures by <strong>40%</strong>.</li><li>Raised automated test coverage from <strong>68% → 92%</strong>.</li></ul></div></article>
+            <article class="checkpoint"><div class="checkpoint-badge">04</div><div><span class="date">AUG 2021 — NOV 2021 · BENGALURU</span><h3>Data Science Intern · IG Group</h3><p>Built fraud detection, semantic search and Airflow automation.</p><ul><li>Estimated fraud losses reduced by <strong>₹12L/month</strong>.</li><li>Analyst productivity increased <strong>45%</strong>.</li><li>Eliminated <strong>10+ hours/week</strong> of manual reporting.</li></ul></div></article>
+            <article class="checkpoint"><div class="checkpoint-badge">05</div><div><span class="date">MAR 2021 — JUN 2021 · BENGALURU</span><h3>Project Trainee · Indian Space Research Organization</h3><p>Predictive monitoring using <strong>10+ years</strong> of telemetry data, reducing response time by <strong>30%</strong>.</p></div></article>
           </div>
         </div>
       </section>
 
-      <section class="about">
-        <h2 class="section-title">About Me</h2>
-        <p>
-          I’m a Machine Learning Engineer focused on building production AI/ML systems for real-world engineering workflows.
-          My work spans predictive machine learning, Generative AI, RAG, agentic systems, MCP integrations, and AI developer tooling.
-          At Rambus, I work on semiconductor engineering workflows and enterprise AI infrastructure in an air-gapped Linux environment.
-          I enjoy taking ambiguous engineering problems and turning them into systems that people can actually use.
-        </p>
-      </section>
-
-      <section class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Machine Learning</h3>
-            <div class="skill-items">
-              <span class="skill-item">Python</span>
-              <span class="skill-item">SQL</span>
-              <span class="skill-item">PyTorch</span>
-              <span class="skill-item">Scikit-Learn</span>
-              <span class="skill-item">XGBoost</span>
-              <span class="skill-item">Deep Learning</span>
-              <span class="skill-item">Time Series</span>
-            </div>
+      <section id="projects" class="level projects-level" data-world="1-4">
+        <div class="section-inner">
+          <div class="level-heading-center"><span class="level-label">WORLD 1-4</span><h2>PROJECT CASTLE</h2><p class="quest">CHOOSE YOUR BUILD</p></div>
+          <div class="project-world-grid">
+            <a class="project-card project-main" href="https://github.com/MayurKishorKumar/Agents" target="_blank" rel="noopener noreferrer"><span class="project-tag">OPEN SOURCE</span><h3>MULTI-AGENT<br>AI REASONING</h3><p>Extensible multi-agent framework integrating SQL, REST APIs and document retrieval using Groq and Ollama.</p><strong>VIEW CODE →</strong></a>
+            <article class="project-card"><span class="project-tag">WORK PROJECT</span><h3>EDA RESOURCE<br>PREDICTION</h3><p>Production ML system using IBM LSF and Spectre data, scaled to <strong>1.5M+ jobs</strong> with R² ≈ 0.87 for 90th-percentile prediction.</p><strong>R² ≈ 0.87</strong></article>
+            <article class="project-card"><span class="project-tag">ML + XAI</span><h3>EXPLAINABLE NBA<br>PREDICTIONS</h3><p>XGBoost outcome prediction with BERT, Llama and Mistral analysis plus SHAP and LIME interpretability.</p><strong>85% ACCURACY</strong></article>
+            <a class="project-card" href="https://github.com/MayurKishorKumar/Lung-Cancer-Image-Classification" target="_blank" rel="noopener noreferrer"><span class="project-tag">DEEP LEARNING</span><h3>LUNG CANCER<br>IMAGE CLASSIFICATION</h3><p>CNN-based image classification pipeline on the LC25000 lung and colon histopathological image dataset.</p><strong>VIEW CODE →</strong></a>
           </div>
-          <div class="skill-category">
-            <h3>Generative AI</h3>
-            <div class="skill-items">
-              <span class="skill-item">LLMs</span>
-              <span class="skill-item">RAG</span>
-              <span class="skill-item">AI Agents</span>
-              <span class="skill-item">MCP</span>
-              <span class="skill-item">Fine-Tuning</span>
-              <span class="skill-item">LoRA / QLoRA</span>
-              <span class="skill-item">Prompt Engineering</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>AI Infrastructure</h3>
-            <div class="skill-items">
-              <span class="skill-item">Linux</span>
-              <span class="skill-item">Docker</span>
-              <span class="skill-item">FastAPI</span>
-              <span class="skill-item">MLflow</span>
-              <span class="skill-item">FAISS</span>
-              <span class="skill-item">ChromaDB</span>
-              <span class="skill-item">Ollama</span>
-              <span class="skill-item">Groq</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>AI Developer Tooling</h3>
-            <div class="skill-items">
-              <span class="skill-item">GitHub Copilot</span>
-              <span class="skill-item">Continue.dev</span>
-              <span class="skill-item">OpenClaw</span>
-              <span class="skill-item">n8n</span>
-              <span class="skill-item">LangGraph</span>
-              <span class="skill-item">Jira</span>
-              <span class="skill-item">ServiceNow</span>
-            </div>
-          </div>
+          <div class="finish-line"><span>🏁</span><div><b>LEVEL COMPLETE?</b><p>Grab the flag. Then let's build something.</p></div><a href="mailto:mayurakash1999@gmail.com">CONTACT ME →</a></div>
         </div>
-      </section>
-
-      <section class="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Machine Learning Engineer Intern</h3>
-              <p>Rambus</p>
-              <p>Jul 2025 – Present · Bengaluru, India</p>
-              <ul>
-                <li>Architected production ML and AI systems across semiconductor engineering workflows spanning predictive ML, Generative AI, RAG, agentic systems, MCPs, and AI developer tooling in an air-gapped RHEL/Linux environment.</li>
-                <li>Scaled an EDA resource prediction dataset from <strong>30K to 1.5M+ production jobs</strong> across <strong>4+ years</strong>, achieving <strong>R² ≈ 0.87</strong> for 90th-percentile resource prediction using quantile regression.</li>
-                <li>Developed <strong>~15 MCP integrations personally</strong> and <strong>~20 across the team</strong> for Jira, Confluence, Jenkins, and ServiceNow, supporting <strong>hundreds of users</strong> and <strong>~30% of relevant ticket activity</strong>.</li>
-                <li>Engineered AI developer tooling across GitHub Copilot, Continue.dev, terminal-based agents, and OpenClaw, including <strong>~70 engineering skills</strong> and infrastructure supporting <strong>~80–100 daily users</strong> and millions of tokens per day.</li>
-                <li>Designed enterprise RAG and automation workflows combining hybrid retrieval, knowledge-graph retrieval, GenAI log analysis, OCR, and enterprise APIs, with user feedback indicating <strong>~40% average time savings</strong> across AI-assisted workflows.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Applied AI Engineer</h3>
-              <p>Humanitarians AI</p>
-              <p>Sep 2024 – Jun 2025 · Boston, MA, USA</p>
-              <ul>
-                <li>Created <strong>10+ AI applications</strong> from scratch, building custom RAG pipelines and multi-agent systems without relying on orchestration frameworks.</li>
-                <li>Constructed end-to-end RAG pipelines for patient history retrieval, clinical triage, and patient routing across knowledge bases containing <strong>10K+ documents</strong>.</li>
-                <li>Orchestrated agentic AI systems incorporating planning, memory, tool orchestration, multi-hop reasoning, debate, routing, evaluation, and autonomous decision-making.</li>
-                <li>Evaluated transformer models, embedding models, and vector databases including <strong>FAISS</strong> and <strong>ChromaDB</strong> for retrieval quality, inference cost, and deployment performance.</li>
-                <li>Enabled local <strong>Ollama</strong> and cloud-based <strong>Groq</strong> inference services across environments with varying connectivity and compute constraints.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Software Engineer – Platform Reliability &amp; Tooling</h3>
-              <p>AfterQuery Experts</p>
-              <p>Mar 2025 – May 2025 · San Francisco, CA, USA</p>
-              <ul>
-                <li>Strengthened Python-based ML and data processing pipelines by debugging production issues across <strong>NumPy, Pandas, and PyTorch</strong>, reducing runtime failures by <strong>40%</strong>.</li>
-                <li>Expanded automated test coverage from <strong>68% to 92%</strong> through end-to-end testing workflows, improving deployment reliability and reducing onboarding effort.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Data Science Intern</h3>
-              <p>IG Group</p>
-              <p>Aug 2021 – Nov 2021 · Bengaluru, India</p>
-              <ul>
-                <li>Engineered XGBoost-based fraud detection models for high-frequency financial transactions, contributing to fraud prevention initiatives that reduced estimated losses by <strong>₹12L per month</strong>.</li>
-                <li>Optimized transformer-based semantic search pipelines, increasing analyst productivity by <strong>45%</strong>.</li>
-                <li>Streamlined ETL workflows using Apache Airflow, eliminating <strong>10+ hours/week</strong> of manual reporting.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Project Trainee</h3>
-              <p>Indian Space Research Organization (ISRO)</p>
-              <p>Mar 2021 – Jun 2021 · Bengaluru, India</p>
-              <ul>
-                <li>Developed predictive monitoring models using <strong>10+ years</strong> of telemetry data to detect server overheating risks, reducing response time by <strong>30%</strong>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="carousel">
-          <div class="carousel-container">
-            <div class="carousel-slide">
-              <h3>Multi-Agent AI Reasoning Platform</h3>
-              <p>Built an extensible multi-agent reasoning framework integrating SQL databases, REST APIs, and document retrieval pipelines using Groq and Ollama. Reduced complex business query response time to <strong>under 10 seconds</strong> through staged reasoning and parallel tool execution.</p>
-              <div class="project-links">
-                <a href="https://github.com/MayurKishorKumar/Agents" target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-            </div>
-
-            <div class="carousel-slide">
-              <h3>EDA Resource Prediction</h3>
-              <p>Built a production ML system for semiconductor EDA workloads using IBM LSF and Spectre data. Scaled the training dataset from <strong>30K to 1.5M+ jobs</strong> across <strong>4+ years</strong> and achieved <strong>R² ≈ 0.87</strong> for 90th-percentile resource prediction.</p>
-            </div>
-
-            <div class="carousel-slide">
-              <h3>Explainable NBA Game Predictions</h3>
-              <p>Developed an NBA game outcome prediction system achieving <strong>85% accuracy</strong> using XGBoost, with BERT, Llama, and Mistral for natural-language analysis and SHAP and LIME for model interpretability.</p>
-            </div>
-
-            <div class="carousel-slide">
-              <h3>Lung Cancer Image Classification</h3>
-              <p>Built a deep learning image-classification pipeline using CNN-based modeling, preprocessing, training, evaluation, and visualization on the LC25000 lung and colon histopathological image dataset.</p>
-              <div class="project-links">
-                <a href="https://github.com/MayurKishorKumar/Lung-Cancer-Image-Classification" target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-btn prev" aria-label="Previous project">←</button>
-          <button class="carousel-btn next" aria-label="Next project">→</button>
-        </div>
+        <div class="castle"><div class="castle-body"></div><div class="castle-tower t1"></div><div class="castle-tower t2"></div><div class="castle-tower t3"></div><div class="flag"></div></div>
       </section>
     </main>
-    <script type="module" src="script.js"></script>
-  </body>
+    <footer class="game-footer"><span>© 2026 MAYUR KISHOR KUMAR</span><span>BUILT WITH ☕ + PYTHON + PIXELS</span></footer>
+    <div id="coinPopup" class="coin-popup">+1 COIN!</div>
+    <script src="script.js"></script>
+  </div>
+</body>
 </html>
