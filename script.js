@@ -1,57 +1,7 @@
-// Theme Toggle
-const themeToggle = document.getElementById('themeToggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-function setTheme(isDark) {
-  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  themeToggle.textContent = isDark ? '☀️' : '🌙';
-}
-
-// Initialize theme
-setTheme(prefersDark.matches);
-
-themeToggle.addEventListener('click', () => {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  setTheme(!isDark);
-});
-
-// Carousel functionality
-const carousel = document.querySelector('.carousel-container');
-const slides = document.querySelectorAll('.carousel-slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-let currentSlide = 0;
-
-function updateCarousel() {
-  carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-
-prevBtn.addEventListener('click', () => {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  updateCarousel();
-});
-
-nextBtn.addEventListener('click', () => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateCarousel();
-});
-
-// Auto-typing effect for sections
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-document.querySelectorAll('section').forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = 'translateY(20px)';
-  section.style.transition = 'opacity 0.5s, transform 0.5s';
-  observer.observe(section);
-});
+const coinCount=document.getElementById('coinCount');const worldNumber=document.getElementById('worldNumber');const levelPercent=document.getElementById('levelPercent');const popup=document.getElementById('coinPopup');let coins=Number(localStorage.getItem('mayurCoins')||0);coinCount.textContent=String(coins).padStart(2,'0');
+document.querySelectorAll('.level-link,.map-node').forEach(btn=>btn.addEventListener('click',()=>document.getElementById(btn.dataset.target)?.scrollIntoView({behavior:'smooth'})));
+document.querySelectorAll('.coin-trigger').forEach(block=>block.addEventListener('click',e=>{coins++;localStorage.setItem('mayurCoins',coins);coinCount.textContent=String(coins).padStart(2,'0');popup.style.left=`${e.clientX}px`;popup.style.top=`${e.clientY}px`;popup.classList.remove('show');void popup.offsetWidth;popup.classList.add('show');setTimeout(()=>popup.classList.remove('show'),550);block.textContent='✓';block.disabled=true}));
+const checkpoints=document.querySelectorAll('.checkpoint');const observer=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});checkpoints.forEach(x=>observer.observe(x));
+const levels=[...document.querySelectorAll('[data-world]')],mapNodes=[...document.querySelectorAll('.map-node')];const worldObserver=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const world=e.target.dataset.world;worldNumber.textContent=world;mapNodes.forEach(x=>x.classList.toggle('active',x.dataset.target===e.target.id));levelPercent.textContent=String(Math.max(1,['1-1','1-2','1-3','1-4'].indexOf(world)+1)).padStart(2,'0')}),{threshold:.35});levels.forEach(x=>worldObserver.observe(x));
+let soundOn=localStorage.getItem('mayurSound')!=='off';const soundToggle=document.getElementById('soundToggle');function updateSound(){soundToggle.textContent=soundOn?'♪ ON':'♪ OFF'}updateSound();soundToggle.addEventListener('click',()=>{soundOn=!soundOn;localStorage.setItem('mayurSound',soundOn?'on':'off');updateSound()});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();window.scrollBy({top:e.key==='ArrowDown'?innerHeight*.72:-innerHeight*.72,behavior:'smooth'})}});
