@@ -1,0 +1,9 @@
+/* Final responsive and theme overrides */
+body.night .hero-copy h1{color:#fff!important;text-shadow:4px 4px #000!important}
+body.night .hero-role{color:#171820!important;background:#fff!important}
+body.night .hero-sub,body.night .player-hint{color:#dbe8ff!important}
+@media(max-width:600px){
+.hud{padding:0 8px;gap:6px}.hud-brand{font-size:7px;white-space:nowrap}.hud-stats{gap:5px;flex:1;justify-content:center;font-size:5px}.hud-stats span{white-space:nowrap}.hud-button{font-size:5px;padding:6px 7px;white-space:nowrap}
+.hero-world{min-height:900px;height:auto}.hero-copy{width:100%;padding:72px 12px 108px}.hero-copy h1{font-size:21px;line-height:1.65;word-break:normal}.hero-role{max-width:92vw;font-size:6px;line-height:1.7;padding:9px 7px}.hero-sub{font-size:5px;line-height:2;padding:0 8px}.current-quest{width:94vw;min-width:0}.hero-links a{font-size:5px}.player-hint{font-size:5px;padding:0 14px;line-height:1.8}
+.world-map{height:168px;padding:34px 8px;overflow-x:auto;justify-content:flex-start;gap:2px}.map-node{min-width:104px;width:104px}.map-node .node-icon{width:48px;height:48px}.level{padding:82px 5% 100px}.speech-box{font-size:20px;line-height:1.42}.power-grid,.project-world-grid{grid-template-columns:1fr}.power-card{min-height:0}.chips span{font-size:18px}.experience-level{min-height:0}.achievement-strip{grid-template-columns:1fr 1fr}.checkpoint{grid-template-columns:43px 1fr;gap:8px}.checkpoint-badge{width:43px;height:43px;font-size:6px}.checkpoint p,.checkpoint li{font-size:17px}.project-card{min-height:250px;padding:18px}.project-card h3{font-size:8.5px;line-height:1.75}.project-card p{font-size:18px;line-height:1.4}.finish-line{flex-wrap:wrap}.finish-line a{margin-left:0}.castle{display:none}.game-footer{flex-direction:column;gap:10px}body.night .hero-copy h1{color:#fff!important;text-shadow:3px 3px #000!important}
+}
